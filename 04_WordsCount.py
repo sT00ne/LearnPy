@@ -23,7 +23,7 @@ def getcount(path):
 
 
 def main():
-    getcount('Harry.txt')
+    getcount('files/Harry.txt')
 
 
 if __name__ == '__main__':
