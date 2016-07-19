@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+
+<h1>Hello, {{ name }}!</h1>
+
+<!--include-->
+{% include 'index.html' %}
+
+<!--for循环-->
+<ul>
+    {% for comment in comments %}
+    <li>{{ comment }}</li>
+    {% endfor %}
+</ul>
+
+<!--宏(函数)-->
+{% macro render_comment(comment) %}
+<li>{{ comment }}</li>
+{% endmacro %}
+<ul>
+    {% for comment in comments %}
+    {{ render_comment(comment) }}
+    {% endfor %}
+</ul>
+
+</body>
+</html>
